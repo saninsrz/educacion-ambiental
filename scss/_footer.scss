@@ -1,0 +1,103 @@
+/*footer*/
+
+footer {
+
+    border-top: 2px solid #bda89c;
+    margin: 0;
+    background-color: white;
+
+
+    .redesSociales {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-around;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        padding: 0;
+
+
+        .redesSociales__icono {
+            /*BEM*/
+            color: #342c20;
+            font-size: 2rem;
+            transition: 1s linear
+                /*efecto de zoom a las redes sociales cuando paso el cursor sobre ellas*/
+        }
+
+        .redesSociales__icono:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    .boton-menu {
+        background-color: #afb4b4;
+        margin-bottom: 0.5em;
+
+    }
+
+    .derechos {
+        text-align: center;
+        letter-spacing: $espaciado-letras;
+    }
+}
+
+
+@media screen and (max-width:576px) {
+
+    footer {
+        .derechos {
+            display: block;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+
+        .redesSociales__icono {
+            font-size: 1rem;
+        }
+
+        .boton-menu {
+            font-size: 80%;
+        }
+
+
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+
+    footer {
+        .derechos {
+            font-size: 0.8rem;
+        }
+
+        .redesSociales__icono {
+            font-size: 1.4rem;
+        }
+
+        .boton-menu {
+            font-size: 90%;
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+    footer {
+        .derechos {
+            font-size: 1rem;
+        }
+
+        .redesSociales__icono {
+            font-size: 1.8rem;
+        }
+
+        .boton-menu {
+            font-size: 100%;
+        }
+
+    }
+
+}

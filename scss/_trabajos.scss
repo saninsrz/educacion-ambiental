@@ -1,0 +1,320 @@
+/*trabajos*/
+
+
+.chaco-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #b48b7b;
+    border: $borde-textos;
+
+}
+
+
+.chaco-container__texto {
+    margin: 0;
+    padding: 1em;
+    width: 50%;
+    text-align: center;
+
+
+
+    .chaco__titulo {
+        color: $color-titulos;
+        margin: 1em;
+
+    }
+
+    .chaco__texto--estilo {
+        font-size: 1.25em;
+        line-height: 1.37em;
+        letter-spacing: $espaciado-letras;
+        margin: 1em;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 1.25rem;
+        margin: 1em;
+
+    }
+
+}
+
+.chaco-container__plan {
+    border: none;
+    width: 50%;
+
+    .chaco-flyer {
+        text-align: center;
+    }
+}
+
+
+#carrusel-trabajos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carouselExampleFade {
+    width: 50%;
+    padding: 1em;
+    margin: 1em;
+}
+
+.container-asesorias {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border: $borde-textos;
+    background-color: #b98879;
+    width: 100%;
+    padding: 3em;
+
+}
+
+.asesorias__titulo {
+    color: $color-titulos;
+    width: 25%;
+}
+
+.asesorias__texto {
+    width: 25%;
+    font-size: 1.5rem;
+
+}
+
+.icono-manito {
+    font-size: 2.5em;
+    color: #775b48;
+}
+
+.logos-trabajos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    img {
+        cursor: pointer;
+        margin: 2em auto;
+    }
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:576px) {
+
+    .chaco-container {
+        display: block;
+
+        .chaco-container__texto {
+            text-align: center;
+            width: 100%;
+
+            .chaco__titulo {
+                font-size: 1.8rem;
+            }
+
+            .chaco__texto--estilo {
+                font-size: 1rem;
+            }
+
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .chaco-container__plan {
+        margin: 0 auto;
+        width: 70%;
+
+        .chaco-flyer {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #carouselExampleFade {
+        width: 80%;
+    }
+
+    .container-asesorias {
+        display: block;
+
+        .asesorias__titulo {
+            width: 100%;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 0.8em;
+        }
+
+        .asesorias__texto {
+            font-size: 1rem;
+            width: 100%;
+            margin-bottom: 0.8em;
+
+            .icono-manito {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .logos-trabajos {
+        display: block;
+        text-align: center;
+
+        img {
+            width: 60%;
+            margin: 1em auto;
+            text-align: center;
+
+        }
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:768px) {
+
+    .chaco-container {
+        display: block;
+
+        .chaco-container__texto {
+            text-align: center;
+            width: 100%;
+
+            .chaco__titulo {
+                font-size: 2rem;
+            }
+
+            .chaco__texto--estilo {
+                font-size: 1.2rem;
+            }
+
+            a {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+    .chaco-container__plan {
+        margin: 0 auto;
+
+        .chaco-flyer {
+            img {
+                width: 100%;
+
+            }
+        }
+    }
+
+    #carouselExampleFade {
+        width: 80%;
+    }
+
+    .container-asesorias {
+        display: block;
+
+        .asesorias__titulo {
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        .asesorias__texto {
+            font-size: 1.4rem;
+            width: 100%;
+            margin-bottom: 1em;
+
+            .icono-manito {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .logos-trabajos {
+        display: block;
+        text-align: center;
+
+        img {
+            width: 60%;
+            margin: 1.5em auto;
+            text-align: center;
+
+        }
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+    .chaco__texto--estilo {
+        font-size: 1.3rem;
+    }
+
+    a {
+        font-size: 1.3rem;
+    }
+
+    .chaco-container__plan {
+        margin: 0 auto;
+        align-self: center;
+
+        .chaco-flyer {
+            img {
+                width: 100%;
+
+            }
+        }
+    }
+
+    #carouselExampleFade {
+        width: 70%;
+    }
+
+    .container-asesorias {
+        display: block;
+
+        .asesorias__titulo {
+            width: 100%;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1.2em;
+        }
+
+        .asesorias__texto {
+            font-size: 1.5rem;
+            width: 100%;
+            margin-bottom: 1.2em;
+
+            .icono-manito {
+                font-size: 2.7rem;
+            }
+        }
+    }
+
+    .logos-trabajos {
+        display: block;
+        text-align: center;
+
+        img {
+            width: 40%;
+            margin: 1em auto;
+            text-align: center;
+            padding: 0.5em;
+
+        }
+    }
+
+
+}

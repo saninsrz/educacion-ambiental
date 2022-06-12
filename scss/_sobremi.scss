@@ -1,0 +1,315 @@
+/*SOBRE MÍ*/
+
+$margen-texto: 0.5em 3em;
+
+#presentacion {
+
+    .presentacion__caja {
+        border: $borde-textos;
+        background-color: #b98879;
+        margin: 0;
+        width: 100%;
+
+    }
+
+    .presentacion__titulo {
+        color: $color-titulos;
+        margin: 1em;
+
+    }
+
+    .presentacion__parrafo {
+        margin: $margen-texto;
+        font-size: 1.25rem;
+        line-height: 1.37em;
+        letter-spacing: $espaciado-letras;
+        padding-left: 4em;
+        padding-bottom: 1em;
+
+    }
+
+    .link-trabajos {
+        text-decoration: none;
+        color: whitesmoke;
+        margin: $margen-texto;
+        font-size: 1.25rem;
+        padding: auto 4em;
+        align-self: center;
+    }
+
+}
+
+.bosque-niebla {
+    img {
+        width: 100%;
+    }
+}
+
+.contexto__texto {
+    background-color: #f1f0ee;
+}
+
+.contexto__texto__parrafo--estilo {
+    margin: 3em;
+    border-radius: $borde-textos;
+    line-height: 1.37em;
+    font-size: 1.25rem;
+    letter-spacing: $espaciado-letras;
+    text-align: justify;
+
+}
+
+
+.contexto__texto__titulo--estilo {
+    color: $color-titulos;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+
+.tres-check {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3.5em;
+    background-color: #b98879;
+}
+
+.cajita-check {
+    width: 33%;
+    text-align: center;
+
+}
+
+.icono-persona {
+    font-size: 2.5em;
+    color: #775b48;
+    transition: 1s ease-in;
+}
+
+.icono-persona:hover {
+    /*efecto agregado a las personitas*/
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.check {
+
+    color: #88665c;
+    font-size: 1.8em;
+}
+
+.check:before {
+
+    content: '✓';
+    color: #46413b;
+}
+
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (max-width:576px) {
+
+    #presentacion {
+
+        .presentacion__titulo {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .presentacion__parrafo {
+            font-size: 0.9rem;
+            width: 100%;
+            padding-left: 2em;
+            align-self: center;
+        }
+
+        .link-trabajos {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    .bosque-niebla {
+        img {
+            object-position: center;
+        }
+    }
+
+    .contexto__texto {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .contexto__texto__titulo--estilo {
+            margin-top: 1em;
+            font-size: 1.8rem;
+        }
+
+        .contexto__texto__parrafo--estilo {
+            text-align: center;
+            margin: 1.5em;
+            font-size: 0.9rem;
+        }
+    }
+
+    .tres-check {
+        display: block;
+
+        .cajita-check {
+            width: 100%;
+
+            .icono-persona {
+                font-size: 1.5rem;
+            }
+
+            .check {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:577px) and (max-width:768px) {
+
+    #presentacion {
+
+        .presentacion__titulo {
+            font-size: 2rem;
+        }
+
+        .presentacion__parrafo {
+            font-size: 1rem;
+            padding-left: 2.5em;
+            align-self: center;
+        }
+
+        .link-trabajos {
+            font-size: 1rem;
+        }
+
+    }
+
+    .bosque-niebla {
+        img {
+            object-position: center;
+        }
+    }
+
+
+    .contexto__texto {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .contexto__texto__titulo--estilo {
+            font-size: 2rem;
+            margin: 1em auto;
+
+        }
+
+        .contexto__texto__parrafo--estilo {
+            text-align: center;
+            margin: 1.7em;
+            font-size: 1rem;
+        }
+    }
+
+    .tres-check {
+        display: block;
+
+        .cajita-check {
+            width: 100%;
+
+            .icono-persona {
+                font-size: 1.5rem;
+            }
+
+            .check {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+    #presentacion {
+
+        .presentacion__titulo {
+            font-size: 2.2rem;
+        }
+
+        .presentacion__parrafo {
+            font-size: 1.1rem;
+        }
+
+        .link-trabajos {
+            font-size: 1.25rem;
+        }
+    }
+
+    .bosque-niebla {
+        img {
+            object-position: top;
+        }
+    }
+
+
+    .contexto__texto {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        .contexto__texto__titulo--estilo {
+            font-size: 2.2rem;
+            margin: 1em auto;
+
+        }
+
+        .contexto__texto__parrafo--estilo {
+            text-align: center;
+            margin: 1.7em;
+            font-size: 1.1rem;
+        }
+    }
+
+    .tres-check {
+        padding: 2.5em;
+        justify-content: space-evenly;
+
+        .cajita-check {
+
+            .icono-persona {
+                font-size: 2rem;
+            }
+
+            .check {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.7rem;
+            }
+        }
+
+    }
+
+}

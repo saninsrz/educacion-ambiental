@@ -1,0 +1,1353 @@
+@charset "UTF-8";
+/*En esta hoja aplico estilos al index y a partes de la estructura del sitio que se repiten en las demás secciones*/
+/*galería con grid*/
+.galeria {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  grid-gap: 1em;
+  margin-bottom: 2em;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.galeria__item {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.galeria__imagen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.galeria__imagen img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  cursor: pointer;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.galeria__item:hover .galeria__imagen img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  /*las imágenes hacen zoom con una transición suave cuando paso el cursor sobre ellas*/
+}
+
+.columna__ancho--uno {
+  grid-column: span 1;
+}
+
+.columna__ancho--dos {
+  grid-column: span 2;
+}
+
+.fila__alto--uno {
+  grid-row: span 1;
+}
+
+.fila__alto--dos {
+  grid-row: span 2;
+}
+
+.fila__alto--tres {
+  grid-row: span 3;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 576px) {
+  .galeria {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .columna__ancho--dos {
+    grid-column: span 1;
+  }
+}
+
+/*A partir del media query anterior (mobile first), la galería ya es responsive en los dispositivos más grandes*/
+/*footer*/
+footer {
+  border-top: 2px solid #bda89c;
+  margin: 0;
+  background-color: white;
+}
+
+footer .redesSociales {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+footer .redesSociales .redesSociales__icono {
+  /*BEM*/
+  color: #342c20;
+  font-size: 2rem;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
+footer .redesSociales .redesSociales__icono:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+footer .boton-menu {
+  background-color: #afb4b4;
+  margin-bottom: 0.5em;
+}
+
+footer .derechos {
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+@media screen and (max-width: 576px) {
+  footer .derechos {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  footer .redesSociales__icono {
+    font-size: 1rem;
+  }
+  footer .boton-menu {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  footer .derechos {
+    font-size: 0.8rem;
+  }
+  footer .redesSociales__icono {
+    font-size: 1.4rem;
+  }
+  footer .boton-menu {
+    font-size: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  footer .derechos {
+    font-size: 1rem;
+  }
+  footer .redesSociales__icono {
+    font-size: 1.8rem;
+  }
+  footer .boton-menu {
+    font-size: 100%;
+  }
+}
+
+/*trabajos*/
+.chaco-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #b48b7b;
+  border: 2px solid #b6917f;
+}
+
+.chaco-container__texto {
+  margin: 0;
+  padding: 1em;
+  width: 50%;
+  text-align: center;
+}
+
+.chaco-container__texto .chaco__titulo {
+  color: #4c4236;
+  margin: 1em;
+}
+
+.chaco-container__texto .chaco__texto--estilo {
+  font-size: 1.25em;
+  line-height: 1.37em;
+  letter-spacing: 3px;
+  margin: 1em;
+}
+
+.chaco-container__texto a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1.25rem;
+  margin: 1em;
+}
+
+.chaco-container__plan {
+  border: none;
+  width: 50%;
+}
+
+.chaco-container__plan .chaco-flyer {
+  text-align: center;
+}
+
+#carrusel-trabajos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carouselExampleFade {
+  width: 50%;
+  padding: 1em;
+  margin: 1em;
+}
+
+.container-asesorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 2px solid #b6917f;
+  background-color: #b98879;
+  width: 100%;
+  padding: 3em;
+}
+
+.asesorias__titulo {
+  color: #4c4236;
+  width: 25%;
+}
+
+.asesorias__texto {
+  width: 25%;
+  font-size: 1.5rem;
+}
+
+.icono-manito {
+  font-size: 2.5em;
+  color: #775b48;
+}
+
+.logos-trabajos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logos-trabajos img {
+  cursor: pointer;
+  margin: 2em auto;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 576px) {
+  .chaco-container {
+    display: block;
+  }
+  .chaco-container .chaco-container__texto {
+    text-align: center;
+    width: 100%;
+  }
+  .chaco-container .chaco-container__texto .chaco__titulo {
+    font-size: 1.8rem;
+  }
+  .chaco-container .chaco-container__texto .chaco__texto--estilo {
+    font-size: 1rem;
+  }
+  .chaco-container .chaco-container__texto a {
+    font-size: 1rem;
+  }
+  .chaco-container__plan {
+    margin: 0 auto;
+    width: 70%;
+  }
+  .chaco-container__plan .chaco-flyer img {
+    width: 100%;
+  }
+  #carouselExampleFade {
+    width: 80%;
+  }
+  .container-asesorias {
+    display: block;
+  }
+  .container-asesorias .asesorias__titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.8em;
+  }
+  .container-asesorias .asesorias__texto {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 0.8em;
+  }
+  .container-asesorias .asesorias__texto .icono-manito {
+    font-size: 2rem;
+  }
+  .logos-trabajos {
+    display: block;
+    text-align: center;
+  }
+  .logos-trabajos img {
+    width: 60%;
+    margin: 1em auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .chaco-container {
+    display: block;
+  }
+  .chaco-container .chaco-container__texto {
+    text-align: center;
+    width: 100%;
+  }
+  .chaco-container .chaco-container__texto .chaco__titulo {
+    font-size: 2rem;
+  }
+  .chaco-container .chaco-container__texto .chaco__texto--estilo {
+    font-size: 1.2rem;
+  }
+  .chaco-container .chaco-container__texto a {
+    font-size: 1.2rem;
+  }
+  .chaco-container__plan {
+    margin: 0 auto;
+  }
+  .chaco-container__plan .chaco-flyer img {
+    width: 100%;
+  }
+  #carouselExampleFade {
+    width: 80%;
+  }
+  .container-asesorias {
+    display: block;
+  }
+  .container-asesorias .asesorias__titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1em;
+  }
+  .container-asesorias .asesorias__texto {
+    font-size: 1.4rem;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .container-asesorias .asesorias__texto .icono-manito {
+    font-size: 2.5rem;
+  }
+  .logos-trabajos {
+    display: block;
+    text-align: center;
+  }
+  .logos-trabajos img {
+    width: 60%;
+    margin: 1.5em auto;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .chaco__texto--estilo {
+    font-size: 1.3rem;
+  }
+  a {
+    font-size: 1.3rem;
+  }
+  .chaco-container__plan {
+    margin: 0 auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .chaco-container__plan .chaco-flyer img {
+    width: 100%;
+  }
+  #carouselExampleFade {
+    width: 70%;
+  }
+  .container-asesorias {
+    display: block;
+  }
+  .container-asesorias .asesorias__titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.2em;
+  }
+  .container-asesorias .asesorias__texto {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 1.2em;
+  }
+  .container-asesorias .asesorias__texto .icono-manito {
+    font-size: 2.7rem;
+  }
+  .logos-trabajos {
+    display: block;
+    text-align: center;
+  }
+  .logos-trabajos img {
+    width: 40%;
+    margin: 1em auto;
+    text-align: center;
+    padding: 0.5em;
+  }
+}
+
+/*SOBRE MÍ*/
+#presentacion .presentacion__caja {
+  border: 2px solid #b6917f;
+  background-color: #b98879;
+  margin: 0;
+  width: 100%;
+}
+
+#presentacion .presentacion__titulo {
+  color: #4c4236;
+  margin: 1em;
+}
+
+#presentacion .presentacion__parrafo {
+  margin: 0.5em 3em;
+  font-size: 1.25rem;
+  line-height: 1.37em;
+  letter-spacing: 3px;
+  padding-left: 4em;
+  padding-bottom: 1em;
+}
+
+#presentacion .link-trabajos {
+  text-decoration: none;
+  color: whitesmoke;
+  margin: 0.5em 3em;
+  font-size: 1.25rem;
+  padding: auto 4em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.bosque-niebla img {
+  width: 100%;
+}
+
+.contexto__texto {
+  background-color: #f1f0ee;
+}
+
+.contexto__texto__parrafo--estilo {
+  margin: 3em;
+  border-radius: 2px solid #b6917f;
+  line-height: 1.37em;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  text-align: justify;
+}
+
+.contexto__texto__titulo--estilo {
+  color: #4c4236;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+.tres-check {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3.5em;
+  background-color: #b98879;
+}
+
+.cajita-check {
+  width: 33%;
+  text-align: center;
+}
+
+.icono-persona {
+  font-size: 2.5em;
+  color: #775b48;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+
+.icono-persona:hover {
+  /*efecto agregado a las personitas*/
+  cursor: pointer;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+.check {
+  color: #88665c;
+  font-size: 1.8em;
+}
+
+.check:before {
+  content: '✓';
+  color: #46413b;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 576px) {
+  #presentacion .presentacion__titulo {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  #presentacion .presentacion__parrafo {
+    font-size: 0.9rem;
+    width: 100%;
+    padding-left: 2em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #presentacion .link-trabajos {
+    font-size: 0.9rem;
+  }
+  .bosque-niebla img {
+    -o-object-position: center;
+       object-position: center;
+  }
+  .contexto__texto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contexto__texto .contexto__texto__titulo--estilo {
+    margin-top: 1em;
+    font-size: 1.8rem;
+  }
+  .contexto__texto .contexto__texto__parrafo--estilo {
+    text-align: center;
+    margin: 1.5em;
+    font-size: 0.9rem;
+  }
+  .tres-check {
+    display: block;
+  }
+  .tres-check .cajita-check {
+    width: 100%;
+  }
+  .tres-check .cajita-check .icono-persona {
+    font-size: 1.5rem;
+  }
+  .tres-check .cajita-check .check {
+    font-size: 1.5rem;
+  }
+  .tres-check .cajita-check h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  #presentacion .presentacion__titulo {
+    font-size: 2rem;
+  }
+  #presentacion .presentacion__parrafo {
+    font-size: 1rem;
+    padding-left: 2.5em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #presentacion .link-trabajos {
+    font-size: 1rem;
+  }
+  .bosque-niebla img {
+    -o-object-position: center;
+       object-position: center;
+  }
+  .contexto__texto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contexto__texto .contexto__texto__titulo--estilo {
+    font-size: 2rem;
+    margin: 1em auto;
+  }
+  .contexto__texto .contexto__texto__parrafo--estilo {
+    text-align: center;
+    margin: 1.7em;
+    font-size: 1rem;
+  }
+  .tres-check {
+    display: block;
+  }
+  .tres-check .cajita-check {
+    width: 100%;
+  }
+  .tres-check .cajita-check .icono-persona {
+    font-size: 1.5rem;
+  }
+  .tres-check .cajita-check .check {
+    font-size: 1.5rem;
+  }
+  .tres-check .cajita-check h3 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  #presentacion .presentacion__titulo {
+    font-size: 2.2rem;
+  }
+  #presentacion .presentacion__parrafo {
+    font-size: 1.1rem;
+  }
+  #presentacion .link-trabajos {
+    font-size: 1.25rem;
+  }
+  .bosque-niebla img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  .contexto__texto {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contexto__texto .contexto__texto__titulo--estilo {
+    font-size: 2.2rem;
+    margin: 1em auto;
+  }
+  .contexto__texto .contexto__texto__parrafo--estilo {
+    text-align: center;
+    margin: 1.7em;
+    font-size: 1.1rem;
+  }
+  .tres-check {
+    padding: 2.5em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .tres-check .cajita-check .icono-persona {
+    font-size: 2rem;
+  }
+  .tres-check .cajita-check .check {
+    font-size: 1.6rem;
+  }
+  .tres-check .cajita-check h3 {
+    font-size: 1.7rem;
+  }
+}
+
+/*CONTACTO*/
+#contacto {
+  margin: 2em;
+}
+
+#contacto .contacto__titulo {
+  color: #4c4236;
+  margin: 1.25em;
+  text-align: center;
+}
+
+#contacto .formulario {
+  /*BEM*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#contacto .formulario .formulario__input--transicion {
+  width: 20%;
+  height: 1.37em;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  color: #775b48;
+}
+
+#contacto .formulario .formulario__input--transicion:focus {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#contacto .formulario strong {
+  font-size: 1.25rem;
+}
+
+#contacto .formulario .formulario__input--margen {
+  margin: 1.25em;
+  color: #775b48;
+}
+
+#contacto .formulario .formulario__pie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contacto .formulario .formulario__pie .checkbox {
+  text-align: center;
+  color: #342c20;
+}
+
+#contacto .formulario .formulario__pie .checkbox input {
+  cursor: pointer;
+}
+
+#contacto .formulario .formulario__pie strong,
+#contacto .formulario .formulario__pie .checkbox,
+#contacto .formulario .formulario__pie .formulario__botones {
+  margin: 1em;
+}
+
+#contacto .formulario .formulario__pie .formulario__boton {
+  color: #775b48;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+#contacto .formulario .formulario__pie .formulario__boton:hover {
+  /*efecto de rotación en los botones*/
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 576px) {
+  #contacto .contacto__titulo {
+    font-size: 1.8rem;
+  }
+  #contacto .formulario .formulario__input--transicion {
+    width: 60%;
+  }
+  #contacto .formulario .formulario__input--transicion:focus {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  #contacto .formulario strong {
+    font-size: 1rem;
+  }
+  #contacto .formulario .formulario__input--margen {
+    width: 80%;
+  }
+  #contacto .formulario .formulario__pie {
+    display: block;
+    font-size: 1rem;
+  }
+  #contacto .formulario .formulario__pie .formulario__botones {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  #contacto .contacto__titulo {
+    font-size: 2rem;
+  }
+  #contacto .formulario .formulario__input--transicion {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  #contacto .formulario .formulario__input--transicion:focus {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  #contacto .formulario input {
+    text-align: center;
+  }
+  #contacto .formulario strong {
+    font-size: 1.2rem;
+  }
+  #contacto .formulario .formulario__input--margen {
+    width: 80%;
+  }
+  #contacto .formulario .formulario__pie {
+    display: block;
+    font-size: 1.2rem;
+  }
+  #contacto .formulario .formulario__pie .formulario__botones {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  #contacto .contacto__titulo {
+    font-size: 2.2rem;
+  }
+  #contacto .formulario .formulario__input--transicion {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  #contacto .formulario .formulario__input--transicion:focus {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  #contacto .formulario input {
+    text-align: center;
+  }
+  #contacto .formulario strong {
+    font-size: 1.3rem;
+  }
+  #contacto .formulario .formulario__input--margen {
+    width: 80%;
+  }
+  #contacto .formulario .formulario__pie {
+    font-size: 1.3rem;
+  }
+  #contacto .formulario .formulario__pie .formulario__botones {
+    text-align: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font: normal 16px "Kanit", sans-serif;
+  background: #e1dcd5;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+}
+
+#menu {
+  width: 100%;
+  margin-bottom: 1.87em;
+}
+
+.contenedor-inicio {
+  border: 2px solid #b6917f;
+  background-color: #b98879;
+  margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.inicio__titulo {
+  /*BEM*/
+  color: #4c4236;
+  text-decoration: none;
+  margin: 1em;
+}
+
+.inicio__introduccion {
+  line-height: 1.37em;
+  letter-spacing: 3px;
+  margin: 1em;
+  font-size: 1.25rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.contenedor-bosque {
+  border: 2px solid #b6917f;
+  background-color: #ede8e5;
+  margin: 0;
+  border-bottom: none;
+}
+
+.contenedor-bosque .inicio__frase {
+  margin-left: 4em;
+  width: 50%;
+}
+
+.contenedor-bosque .inicio__frase p {
+  font-size: 1.8rem;
+  line-height: 1.37em;
+  letter-spacing: 3px;
+  padding: 0.9375em;
+  color: #4c4236;
+}
+
+.contenedor-bosque .inicio__frase .joaquin-araujo {
+  margin: 0.625em;
+  padding: 0.9375em;
+  font-size: 1.5rem;
+}
+
+.amanecer-bosque {
+  width: 50%;
+}
+
+.frase-jane {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #b98879;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: calc(50vh - 2.5em);
+  /*aumenté el tamaño del contenedor*/
+}
+
+.frase-jane__estilo {
+  color: #4c4236;
+  font-size: 1.8rem;
+  line-height: 1.37em;
+  padding: 0.9375em;
+}
+
+.jane-goodall {
+  margin: 0.625em;
+  padding: 0.9375em;
+  font-size: 1.5rem;
+}
+
+.contenedor-playa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.amanecer-playero {
+  width: 50%;
+  margin-left: 4em;
+}
+
+.frase-abbey {
+  width: 50%;
+  margin-right: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.frase-abbey p {
+  font-size: 1.8rem;
+  color: #4c4236;
+}
+
+.frase-abbey strong {
+  margin: 0.625em;
+  padding: 0.9375em;
+  font-size: 1.5rem;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 576px) {
+  .contenedor-inicio {
+    display: block;
+  }
+  .contenedor-inicio .inicio__titulo {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .contenedor-inicio .inicio__introduccion {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .contenedor-bosque {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor-bosque .inicio__frase {
+    width: 100%;
+    margin: 1em;
+  }
+  .contenedor-bosque .inicio__frase p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .contenedor-bosque .inicio__frase .joaquin-araujo {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.3em;
+  }
+  .contenedor-bosque .amanecer-bosque {
+    text-align: center;
+  }
+  .contenedor-bosque .amanecer-bosque img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .frase-jane {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .frase-jane .frase-jane__estilo {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .frase-jane .jane-goodall {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.3em;
+  }
+  .contenedor-playa {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .contenedor-playa .amanecer-playero {
+    text-align: center;
+    margin: auto;
+  }
+  .contenedor-playa .amanecer-playero img {
+    width: 100%;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contenedor-playa .frase-abbey {
+    text-align: center;
+    margin: 1em auto;
+    width: auto;
+  }
+  .contenedor-playa .frase-abbey p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .contenedor-playa .frase-abbey strong {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.3em;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .contenedor-inicio {
+    display: block;
+  }
+  .contenedor-inicio .inicio__titulo {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .contenedor-inicio .inicio__introduccion {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .contenedor-bosque {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor-bosque .inicio__frase {
+    width: 100%;
+    margin: 1em;
+  }
+  .contenedor-bosque .inicio__frase p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .contenedor-bosque .inicio__frase .joaquin-araujo {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5em;
+  }
+  .contenedor-bosque .amanecer-bosque {
+    text-align: center;
+  }
+  .contenedor-bosque .amanecer-bosque img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .frase-jane {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .frase-jane .frase-jane__estilo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .frase-jane .jane-goodall {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5em;
+  }
+  .contenedor-playa {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  .contenedor-playa .amanecer-playero {
+    text-align: center;
+    margin: auto;
+  }
+  .contenedor-playa .amanecer-playero img {
+    width: 100%;
+    text-align: center;
+    margin-top: 2.2em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contenedor-playa .frase-abbey {
+    text-align: center;
+    margin: 1.2em auto;
+    width: auto;
+  }
+  .contenedor-playa .frase-abbey p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .contenedor-playa .frase-abbey strong {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .contenedor-inicio {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenedor-inicio .inicio__titulo {
+    font-size: 2.4rem;
+  }
+  .contenedor-inicio .inicio__introduccion {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .contenedor-bosque .inicio__frase {
+    margin-left: 2em;
+  }
+  .contenedor-bosque .inicio__frase p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .contenedor-bosque .inicio__frase .joaquin-araujo {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.7em;
+  }
+  .contenedor-bosque .amanecer-bosque {
+    text-align: center;
+  }
+  .contenedor-bosque .amanecer-bosque img {
+    width: 100%;
+    text-align: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  .frase-jane {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: auto;
+  }
+  .frase-jane .frase-jane__estilo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .frase-jane .jane-goodall {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.7em;
+  }
+  .contenedor-playa {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contenedor-playa .amanecer-playero {
+    text-align: center;
+    margin: auto;
+  }
+  .contenedor-playa .amanecer-playero img {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+  .contenedor-playa .frase-abbey {
+    text-align: center;
+    margin: auto 2em;
+  }
+  .contenedor-playa .frase-abbey p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .contenedor-playa .frase-abbey strong {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.7em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

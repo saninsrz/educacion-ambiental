@@ -1,0 +1,224 @@
+/*CONTACTO*/
+
+$formulario__pie--margen: 1em;
+
+#contacto {
+    margin: 2em;
+
+    .contacto__titulo {
+        color: $color-titulos;
+        margin: 1.25em;
+        text-align: center;
+    }
+
+
+    .formulario {
+        /*BEM*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        .formulario__input--transicion {
+            width: 20%;
+            height: 1.37em;
+            transition: 1s all;
+            color: #775b48;
+        }
+
+        .formulario__input--transicion:focus {
+            transform: scale(1.5);
+
+        }
+
+        strong {
+            font-size: 1.25rem;
+        }
+
+        .formulario__input--margen {
+            margin: 1.25em;
+            color: #775b48;
+        }
+
+
+        .formulario__pie {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            .checkbox {
+                text-align: center;
+                color: #342c20;
+
+                input {
+                    cursor: pointer;
+                }
+            }
+
+            strong,
+            .checkbox,
+            .formulario__botones {
+                margin: $formulario__pie--margen;
+            }
+
+            .formulario__boton {
+                color: #775b48;
+                transition: 1s ease-in-out;
+            }
+
+            .formulario__boton:hover {
+                /*efecto de rotación en los botones*/
+                transform: rotate(360deg);
+            }
+
+
+        }
+    }
+
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:576px) {
+    #contacto {
+
+        .contacto__titulo {
+            font-size: 1.8rem;
+        }
+
+        .formulario {
+
+            .formulario__input--transicion {
+                width: 60%;
+
+            }
+
+            .formulario__input--transicion:focus {
+                transform: scale(1.2);
+
+            }
+
+            strong {
+                font-size: 1rem;
+
+            }
+
+            .formulario__input--margen {
+                width: 80%;
+            }
+
+            .formulario__pie {
+                display: block;
+                font-size: 1rem;
+
+                .formulario__botones {
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}
+
+
+@media screen and (min-width:577px) and (max-width:768px) {
+
+    #contacto {
+
+        .contacto__titulo {
+            font-size: 2rem;
+        }
+
+        .formulario {
+
+            .formulario__input--transicion {
+                flex-basis: 40%;
+                flex-grow: 0;
+                flex-shrink: 0;
+
+            }
+
+            .formulario__input--transicion:focus {
+                transform: scale(1.2);
+
+            }
+
+            input {
+                text-align: center;
+            }
+
+            strong {
+                font-size: 1.2rem;
+
+            }
+
+            .formulario__input--margen {
+                width: 80%;
+            }
+
+            .formulario__pie {
+                display: block;
+                font-size: 1.2rem;
+
+                .formulario__botones {
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+
+@media screen and (min-width:769px) and (max-width:992px) {
+
+
+    #contacto {
+
+        .contacto__titulo {
+            font-size: 2.2rem;
+        }
+
+        .formulario {
+
+            .formulario__input--transicion {
+                flex-basis: 40%;
+                flex-grow: 0;
+                flex-shrink: 0;
+
+            }
+
+            .formulario__input--transicion:focus {
+                transform: scale(1.1);
+
+            }
+
+            input {
+                text-align: center;
+            }
+
+            strong {
+                font-size: 1.3rem;
+
+            }
+
+            .formulario__input--margen {
+                width: 80%;
+            }
+
+            .formulario__pie {
+                font-size: 1.3rem;
+
+                .formulario__botones {
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}
